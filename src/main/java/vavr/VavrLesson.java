@@ -45,5 +45,11 @@ public class VavrLesson {
                 .collect(List.collector());
     }
     //3. Either
-    final Either<Integer, String> either = null;
+    public Either<String, String> testEither(int param) {
+        if(param == 1) {
+            return Either.right("Success");
+        } else {
+            return Either.left("Fail");
+        }
+    }
 }
